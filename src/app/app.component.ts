@@ -6,14 +6,18 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //title = 'Angular App';
-  // name:string='Kiran';
-  // city:string='Vizag';
-  msg:string = 'angular app';
-   wishes = function():string{
-     return "good moring folks!";
   
-   }
+  name:string;
+  gender:string;
+  msg:string;
+  findGender(){
+    if (this.name === undefined || this.name === '')
+      this.msg = "please enter a name";
+    else
+      this.msg = `Hello ${this.gender} ${this.name}`;
+  }
+
+   
 }
 
 // import { Component } from '@angular/core';

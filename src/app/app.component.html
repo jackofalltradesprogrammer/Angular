@@ -1,10 +1,19 @@
 <h2>Event Binding</h2>
 
-<button (click)="Msg ='Hello'">Say Hello</button>
-<button (click)="Msg =''">Clear</button>
-<br>
-
-{{Msg}}
+<table style="width:100%">
+    <tr>
+      <td> Enter name:</td>
+      <td> <input type=text [(ngModel)]='name'/> </td>
+    </tr> 
+    <tr>
+      <td><input type=radio name="gender" value = "Mr" [(ngModel)] = 'gender'/> Male</td>
+      <td><input type=radio name="gender" value = "Miss" [(ngModel)] = 'gender'/> Female </td>
+    </tr>
+    <tr>
+    <td><button (click) ='findGender()'>Submit</button></td>
+    <td>{{msg}}</td>
+    </tr>
+</table>
 
 <!-- The content below is only a placeholder and can be replaced. 
 <div style="text-align:center">
