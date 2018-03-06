@@ -8,9 +8,29 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent{
+  employees:any[];
+  heading:boolean=false;
+  getEmployees(){
+    this.heading=true;
+    this.employees = [
+      {id:101, ename:'Kiran', job:'Trainer', salary:5500},
+      {id:102, ename:'Suhal', job:'Trainer', salary:5300},
+      {id:103, ename:'Taran', job:'Programmer', salary:4500},
+      {id:104, ename:'Abhole', job:'Developers', salary:3500}
+    ];
+  }
 
-    operations:string[] = ['Create', 'Retrieve', 'Update', 'Delete'];
+  clearEmployees(){
+    this.heading=false;
+    this.employees=null;
+  }
 }
+
+
+// export class AppComponent{
+
+//     operations:string[] = ['Create', 'Retrieve', 'Update', 'Delete'];
+// }
 
 
 
