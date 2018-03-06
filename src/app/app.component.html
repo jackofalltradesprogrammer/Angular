@@ -1,4 +1,43 @@
-<h2>Event Binding</h2>
+<h2> Structural Directives </h2>
+
+<input type="checkbox" [(ngModel)] = 'x'> True <br>
+<div *ngIf='x; else y'>
+    <p>True Block</p>
+    
+</div>
+
+<ng-template #y>
+  <p>False Block</p>
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2>Event Binding</h2>
 
 <table style="width:100%">
     <tr>
@@ -13,7 +52,7 @@
     <td><button (click) ='findGender()'>Submit</button></td>
     <td>{{msg}}</td>
     </tr>
-</table>
+</table> -->
 
 <!-- The content below is only a placeholder and can be replaced. 
 <div style="text-align:center">
