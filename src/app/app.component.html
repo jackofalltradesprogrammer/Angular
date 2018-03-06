@@ -1,15 +1,10 @@
 <h2> Structural Directives </h2>
 
-<input type="checkbox" [(ngModel)] = 'x'> True <br>
-<div *ngIf='x; else y'>
-    <p>True Block</p>
-    
-</div>
-
-<ng-template #y>
-  <p>False Block</p>
-</ng-template>
-
+<ol>
+  <li *ngFor='let item of items'>
+    {{item}}
+  </li>
+</ol>
 
 
 

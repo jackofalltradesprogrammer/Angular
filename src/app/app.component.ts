@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  e:any={id:1001, ename:"Kiran", job:"Trainer", salary:5500};
+  items:string[]=[];
+  constructor(){
+    this.items = ['pencil', 'pen', 'eraser', 'scale'];
+  }
 }
 
 
