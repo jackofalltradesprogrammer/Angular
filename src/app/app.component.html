@@ -1,14 +1,9 @@
 <h2> Structural Directives </h2>
 
-<button (click)='getItems("fruits")'>Fruits </button>
-<button (click)='getItems("vegetables")'>Vegetables </button><br>
-<h2>{{title}}</h2>
+<h2> Structural Directives </h2>
 
-<ol>
-  <li *ngFor='let i of items'>
-    {{i}}
-  </li>
-</ol>
+<button *ngFor='let o of operations' value={{o}} (click)='msg=o'>{{o}}</button>
+
 {{msg}}
 
 
@@ -20,12 +15,16 @@
 
 
 
+<!-- <button (click)='getItems("fruits")'>Fruits </button>
+<button (click)='getItems("vegetables")'>Vegetables </button><br>
+<h2>{{title}}</h2>
 
-
-
-
-
-
+<ol>
+  <li *ngFor='let i of items'>
+    {{i}}
+  </li>
+</ol>
+{{msg}} -->
 
 
 

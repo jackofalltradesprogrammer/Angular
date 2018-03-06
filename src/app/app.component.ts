@@ -6,25 +6,33 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  items:string[]=[];
-  title:string='';
-  msg:string='';
-  constructor(){ }
-   getItems(p) {
-     if (p=='vegetables'){
-        this.title='List of vegetables';
-        this.items=['potato','onion','tomato','banana'];
-        this.msg='Count of vegetables ' + this.items.length;
-     }
-      else if (p=='fruits'){
-        this.title='List of fruits';
-        this.items =['Apple', 'Banana', 'Cherry'];
-        this.msg='Count of fruits ' + this.items.length;
-      }
-        
-   } 
+
+export class AppComponent{
+
+    operations:string[] = ['Create', 'Retrieve', 'Update', 'Delete'];
 }
+
+
+
+// export class AppComponent {
+//   items:string[]=[];
+//   title:string='';
+//   msg:string='';
+//   constructor(){ }
+//    getItems(p) {
+//      if (p=='vegetables'){
+//         this.title='List of vegetables';
+//         this.items=['potato','onion','tomato','banana'];
+//         this.msg='Count of vegetables ' + this.items.length;
+//      }
+//       else if (p=='fruits'){
+//         this.title='List of fruits';
+//         this.items =['Apple', 'Banana', 'Cherry'];
+//         this.msg='Count of fruits ' + this.items.length;
+//       }
+        
+//    } 
+// }
 
 
 
