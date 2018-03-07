@@ -6,25 +6,46 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
 })
 
-
 export class AppComponent{
+  x={};
   employees:any[];
-  heading:boolean=false;
-  getEmployees(){
-    this.heading=true;
+  constructor(){
+    this.x = null;
     this.employees = [
-      {id:101, ename:'Kiran', job:'Trainer', salary:5500},
-      {id:102, ename:'Suhal', job:'Trainer', salary:5300},
-      {id:103, ename:'Taran', job:'Programmer', salary:4500},
-      {id:104, ename:'Abhole', job:'Developers', salary:3500}
-    ];
+    {id:101, ename:'Kiran', job:'Trainer', salary:5500},
+    {id:102, ename:'Suhal', job:'Trainer', salary:5300},
+    {id:103, ename:'Taran', job:'Programmer', salary:4500},
+    {id:104, ename:'Abhole', job:'Developers', salary:3500}
+  ];
   }
-
-  clearEmployees(){
-    this.heading=false;
-    this.employees=null;
+  selectRow(i){
+    this.x = this.employees[i];
   }
 }
+
+
+
+
+
+
+// export class AppComponent{
+//   employees:any[];
+//   heading:boolean=false;
+//   getEmployees(){
+//     this.heading=true;
+//     this.employees = [
+//       {id:101, ename:'Kiran', job:'Trainer', salary:5500},
+//       {id:102, ename:'Suhal', job:'Trainer', salary:5300},
+//       {id:103, ename:'Taran', job:'Programmer', salary:4500},
+//       {id:104, ename:'Abhole', job:'Developers', salary:3500}
+//     ];
+//   }
+
+//   clearEmployees(){
+//     this.heading=false;
+//     this.employees=null;
+//   }
+// }
 
 
 // export class AppComponent{
