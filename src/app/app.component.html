@@ -1,6 +1,6 @@
 <h1>Single Page Application</h1>
 
-<h2> List of Employees</h2>
+<h2> Employee CRUD operations</h2>
 
 <table border="1" >
   <tr>
@@ -17,18 +17,25 @@
     <td>{{e.ename}}</td>
     <td>{{e.job}}</td>
     <td>{{e.salary}}</td>
-    <td><button (click)='selectRow(i)'>Select</button></td>
+    <td><button (click)='selectRow(i)'>Select</button>
+    <button (click)='deleteRow(i)'>Delete</button></td>
+    
   </tr>
 </table>
+{{msg}}
 <hr>
-<div *ngIf='x'>
-<h2>Selected Row Details</h2>
-  ID:{{x.id}} <br>
-  Ename: {{x.ename}}
-  Job: {{x.job}}
-  Salary: {{x.salary}}
-</div>
-<button (click)='x=null'>Clear All Fields</button>
+<!-- <div *ngIf='x'></div> -->
+<h2>Selected Row Details with cloning</h2>
+ <!-- we are using cloning to get the data as when objects are given values, the memorey address will ng-change
+and hence the two-way binding won't be possible. -->
+  ID:<input type="number" [(ngModel)]='x.id'/> <br>
+  Ename: <input type=text [(ngModel)]='x.ename'/> <br>
+  Job: <input type= text [(ngModel)]='x.job'/> <br>
+  Salary: <input type="number"[(ngModel)]='x.salary'/> <br>
+
+<button (click)='x={}'>Clear All Fields</button>
+<button (click)='updateRow()'>Update Row</button>
+
 
 
 
