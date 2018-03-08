@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent{
   x={};
   employees:any[];
+  r:number=0;
+  msg:string='';
   constructor(){
     this.x = null;
     this.employees = [
@@ -18,8 +20,26 @@ export class AppComponent{
     {id:104, ename:'Abhole', job:'Developers', salary:3500}
   ];
   }
-  selectRow(i){
-    this.x = this.employees[i];
+  firstRow(){
+    this.r=0;
+    this.x = this.employees[this.r];
+    this.msg = "";
+  }
+  nextRow(){
+    if(this.r < this.employees.length)
+      this.r+=1;
+    this.x = this.employees[this.r];
+  }
+  prevRow(){
+    if(this.r >0)
+      this.r-=1;
+    this.x = this.employees[this.r];
+    this.msg = "";
+  }
+  lastRow(){
+    this.r=this.employees.length-1;
+    this.x = this.employees[this.r];
+    this.msg = "no more records";
   }
 }
 
