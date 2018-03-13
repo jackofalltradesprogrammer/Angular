@@ -33,7 +33,7 @@ and hence the two-way binding won't be possible. -->
   Job: <input type= text [(ngModel)]='x.job'/> <br>
   Salary: <input type="number"[(ngModel)]='x.salary'/> <br>
 
-<button (click)='x={}'>Clear All Fields</button>
+<button (click)='x=null'>Clear All Fields</button>
 <button (click)='updateRow()'>Update Row</button>
 
 

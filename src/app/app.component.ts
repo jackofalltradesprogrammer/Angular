@@ -8,16 +8,19 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent{
-  x:any={};
-  employees:any[];
+  // x:IEmployee=null; fix the error for the null appear when you load the page
+  x = new Employee();
+  employees:IEmployee[];
   msg:string='';
   constructor(){
-    this.employees = [
-    {id:101, ename:'Kiran', job:'Trainer', salary:5500},
-    {id:102, ename:'Suhal', job:'Trainer', salary:5300},
-    {id:103, ename:'Taran', job:'Programmer', salary:4500},
-    {id:104, ename:'Abhole', job:'Developers', salary:3500}
-  ];
+    this.employees =new Array<IEmployee>(
+      {id:101, ename:'Kiran', job:'Trainer', salary:5500},
+      {id:102, ename:'Suhal', job:'Trainer', salary:5300},
+      {id:103, ename:'Taran', job:'Programmer', salary:4500},
+      {id:104, ename:'Abhole', job:'Developers', salary:3500}
+    );
+   
+ 
   this.msg = 'Total Employee count is ' + this.employees.length; 
   }
   selectRow(i){
@@ -29,7 +32,7 @@ export class AppComponent{
   addRow(){
     this.employees.push(this.x);
     this.msg = 'Total Employee count is ' + this.employees.length;
-    this.x = {};
+    this.x = null;
     alert("Row added succesfully");
   }
   deleteRow(i){
@@ -51,10 +54,26 @@ export class AppComponent{
   }
 }
 
+interface IEmployee{
+  id: number
+  ename: string
+  job: string
+  salary:number
+}
 
-
-
-
+class Employee implements IEmployee {
+  id: number
+  ename: string
+  job: string
+  salary:number
+  constructor(id:number=0, ename: string='', job: string='', salary:number=0){
+    this.id=id;
+    this.ename=ename;
+    this.job=job;
+    this.salary=salary; 
+  }
+  
+}
 
 
 // export class AppComponent{
