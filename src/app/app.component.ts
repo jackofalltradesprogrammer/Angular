@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee, IEmployee} from './Employee';
 //@component contains json object 
 @Component({
   selector: 'app-root',
@@ -42,38 +43,39 @@ export class AppComponent{
     this.msg = 'Total Employee count is ' + this.employees.length; 
   }
   updateRow(){
-    var x1:any={};
+    var x1= new Employee();
     for (var i in this.employees) {
       if (this.employees[i].id == this.x.id){
         x1 = this.employees[i];
         break;
       }
     }
-    this.employees[i]=this.x;
+    this.employees[i]=JSON.parse(JSON.stringify(this.x));;
     alert('Row updated successfully');
   }
 }
 
-interface IEmployee{
-  id: number
-  ename: string
-  job: string
-  salary:number
-}
+// Move it to the new file
+// interface IEmployee{
+//   id: number
+//   ename: string
+//   job: string
+//   salary:number
+// }
 
-class Employee implements IEmployee {
-  id: number
-  ename: string
-  job: string
-  salary:number
-  constructor(id:number=0, ename: string='', job: string='', salary:number=0){
-    this.id=id;
-    this.ename=ename;
-    this.job=job;
-    this.salary=salary; 
-  }
+// class Employee implements IEmployee {
+//   id: number
+//   ename: string
+//   job: string
+//   salary:number
+//   constructor(id?:number, ename?: string, job?: string, salary?:number){
+//     this.id=id;
+//     this.ename=ename;
+//     this.job=job;
+//     this.salary=salary; 
+//   }
   
-}
+// }
 
 
 // export class AppComponent{
