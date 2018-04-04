@@ -1,5 +1,15 @@
 <h1>Main Component</h1>
-<app-employee></app-employee>
+
+<input type="checkbox" [(ngModel)]='employees'>Employee CRUD Operations
+<div *ngIf='employees'>
+  <app-employee></app-employee>    
+</div>
+
+
+
+
+
+
 <!-- <h1>Single Page Application</h1>
 
 <h2> Employee CRUD operations</h2>
