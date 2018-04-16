@@ -1,0 +1,21 @@
+<div style="border: 5px solid green; width:750px">
+   <h1>list People</h1>
+
+  <table border="1">
+    <tr>
+      <th>Index</th>
+      <th>ID</th>
+      <th>Pname</th>
+      <th>Gender</th>
+      <th>Age</th>
+    </tr>
+    <tr *ngFor='let p of people;let i=index'>
+      <td>{{i}}</td>
+      <td>{{p.id}}</td>
+      <td>{{p.pname}}</td>
+      <td>{{p.gender}}</td>
+      <td>{{p.age}}</td>
+    </tr>
+
+  </table>
+</div>
