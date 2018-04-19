@@ -14,6 +14,6 @@ export class Person implements IPerson {
         this.id=id;
         this.pname=pname;
         this.gender=gender;
-        this.age=number;
+        this.age=age;
     }
 }

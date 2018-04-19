@@ -6,6 +6,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import { PersonCountComponent } from './person-count/person-count.component';
+import { PeopleCountComponent } from './people-count/people-count.component';
 
 
 
@@ -15,7 +16,8 @@ import { PersonCountComponent } from './person-count/person-count.component';
     ParentComponent,
     ChildComponent,
     PersonListComponent,
-    PersonCountComponent
+    PersonCountComponent,
+    PeopleCountComponent
     
   ],
   imports: [
