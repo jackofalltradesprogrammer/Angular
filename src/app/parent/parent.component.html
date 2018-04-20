@@ -3,7 +3,7 @@
   <h2>Parent Component</h2>
   <!-- <app-child [receivedDataFromParent]='getParentData()'> -->
   <app-child
-    (childEvent1)='msg=$event'
+    (childEvent1)='getData($event)'
   >
   </app-child>
     Message from the Child: {{msg}}

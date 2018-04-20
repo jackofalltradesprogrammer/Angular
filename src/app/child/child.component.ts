@@ -9,9 +9,9 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
   childEvent1 = new EventEmitter<string>();
-
+  txt1: string;
   onChange(){
-    this.childEvent1.emit("Hello from Child");
+    this.childEvent1.emit(this.txt1);
   }
 
   receivedDataFromParent:string;
