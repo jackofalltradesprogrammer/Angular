@@ -16,9 +16,22 @@ export class PersonListComponent implements OnInit {
       {id:1003,pname:'Gagan', gender:'Male', age:30},
       {id:1004,pname:'Amar', gender:'Male', age:30},
       {id:1005,pname:'Rajiv', gender:'Male', age:30},
-    ]
+    ];
     
    }
+
+   getAllCount(){
+     return this.people.length;
+   }
+
+   getMaleCount(){
+    return this.people.length;
+  }
+
+  getFemaleCount(){
+    return this.people.length;
+  }
+
 
   ngOnInit() {
   }
