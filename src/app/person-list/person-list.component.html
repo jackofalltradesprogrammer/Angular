@@ -17,6 +17,7 @@
       <th>Pname</th>
       <th>Gender</th>
       <th>Age</th>
+      <th>Operations</th>
     </tr>
     <tr *ngFor='let p of people;let i=index'>
       <td>{{i}}</td>
@@ -24,6 +25,7 @@
       <td>{{p.pname}}</td>
       <td>{{p.gender}}</td>
       <td>{{p.age}}</td>
+      <td><button (click)='people.splice(i,1)'>Delete</button></td>
     </tr>
 
   </table>
