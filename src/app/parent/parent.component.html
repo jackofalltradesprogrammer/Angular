@@ -1,8 +1,10 @@
 <div style="border: 5px solid green; width:750px">
 
   <h2>Parent Component</h2>
-  <app-child [receivedDataFromParent]='getParentData()'>
-    
+  <!-- <app-child [receivedDataFromParent]='getParentData()'> -->
+  <app-child
+    (childEvent1)='msg=$event'
+  >
   </app-child>
-
+    Message from the Child: {{msg}}
 </div>
