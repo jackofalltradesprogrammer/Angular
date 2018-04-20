@@ -25,11 +25,11 @@ export class PersonListComponent implements OnInit {
    }
 
    getMaleCount(){
-    return this.people.length;
+    return this.people.filter(x=>x.gender=='Male').length;
   }
 
   getFemaleCount(){
-    return this.people.length;
+    return this.people.filter(x=>x.gender=='Female').length;
   }
 
 
