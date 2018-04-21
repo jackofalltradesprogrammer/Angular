@@ -20,6 +20,11 @@ export class PersonListComponent implements OnInit {
     
    }
 
+   gender:string='';
+   getCount(value){
+    this.gender = value;
+   }
+
    getAllCount(){
      return this.people.length;
    }

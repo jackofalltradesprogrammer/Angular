@@ -5,6 +5,7 @@
     [allCount]='getAllCount()' 
     [maleCount]='getMaleCount()' 
     [femaleCount]='getFemaleCount()'
+    (childEvent1)='getCount($event)'
   ></app-people-count>
   <hr color="green"/>
 
@@ -18,13 +19,16 @@
       <th>Gender</th>
       <th>Age</th>
     </tr>
-    <tr *ngFor='let p of people;let i=index'>
-      <td>{{i}}</td>
-      <td>{{p.id}}</td>
-      <td>{{p.pname}}</td>
-      <td>{{p.gender}}</td>
-      <td>{{p.age}}</td>
+    <ng-container *ngFor='let p of people;let i=index'>
+      <tr *ngIf='gender==p.gender || gender=="All"'>
+        <td>{{i}}</td>
+        <td>{{p.id}}</td>
+        <td>{{p.pname}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.age}}</td>
     </tr>
-
+  </ng-container>
   </table>
 </div>
+
+{{gender}}
