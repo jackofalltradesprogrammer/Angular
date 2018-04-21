@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
   msg:string='';
   getData(value){
-    this.msg =  "Hello " + value + " good morning!";
+    this.msg =  "Hello " + value ;
   }
 
   constructor() {
